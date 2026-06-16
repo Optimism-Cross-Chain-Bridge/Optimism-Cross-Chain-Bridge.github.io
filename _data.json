@@ -1,0 +1,107 @@
+{
+ "keyword": "optimism cross chain",
+ "h1": "Optimism Cross Chain",
+ "brand": "Optimism",
+ "niche": "chain",
+ "verb": "Bridge",
+ "title": "Optimism Cross Chain - Open App",
+ "meta_description": "optimism cross chain access for the official OP Mainnet bridge app, built for supported Ethereum and OP Mainnet asset transfers.",
+ "palette": {
+  "mode": "dark",
+  "bg": "#000000",
+  "accent": "#FF0421",
+  "ink": "#FFFFFF"
+ },
+ "hero_h2": "Move Assets Between Ethereum and OP Mainnet",
+ "hero_lead": "Optimism Cross Chain routes users to the official OP Mainnet Gateway for supported ETH and ERC-20 transfers between Ethereum and OP Mainnet.",
+ "badge": "OP Mainnet",
+ "widget": {
+  "from": "ETH",
+  "from_net": "Ethereum",
+  "to": "ETH",
+  "to_net": "OP Mainnet",
+  "action": "Open Optimism App"
+ },
+ "trust": [
+  "Official domain: app.optimism.io",
+  "Ethereum Layer 2 network",
+  "Standard Bridge for supported assets"
+ ],
+ "what_is": "Optimism is the ecosystem behind OP Mainnet, its flagship Ethereum Layer 2 blockchain; the official bridge routes supported transfers between Ethereum and OP Mainnet through <a href=\"https://app.optimism.io/bridge/deposit\">app.optimism.io</a>.",
+ "how": [
+  {
+   "t": "Open the gateway",
+   "d": "Use the official app URL and verify the app.optimism.io domain before connecting a wallet."
+  },
+  {
+   "t": "Connect wallet",
+   "d": "Select your Ethereum wallet and confirm you are on the intended source network."
+  },
+  {
+   "t": "Choose asset and route",
+   "d": "Pick the supported token, amount, source chain, and OP Mainnet destination."
+  },
+  {
+   "t": "Review and confirm",
+   "d": "Check gas, recipient, timing, and token details before signing the transaction."
+  }
+ ],
+ "points": [
+  {
+   "h": "Official app-first route",
+   "p": "The destination should be the Optimism bridge interface on app.optimism.io, not a lookalike domain."
+  },
+  {
+   "h": "Standard Bridge design",
+   "p": "Optimism docs describe the <a href=\"https://docs.optimism.io/app-developers/guides/bridging/standard-bridge\">Standard Bridge</a> as supporting ETH and most ERC-20 transfers between Ethereum and OP Mainnet."
+  },
+  {
+   "h": "Ethereum-aligned settlement",
+   "p": "OP Mainnet is an Ethereum Layer 2; ethereum.org explains how <a href=\"https://ethereum.org/layer-2/\">Layer 2 networks</a> extend Ethereum while relying on its base layer."
+  }
+ ],
+ "eeat": [
+  {
+   "text": "Optimism official site",
+   "url": "https://www.optimism.io/"
+  },
+  {
+   "text": "Optimism bridge docs",
+   "url": "https://docs.optimism.io/app-developers/guides/bridging/standard-bridge"
+  },
+  {
+   "text": "Ethereum layer 2 overview",
+   "url": "https://ethereum.org/layer-2/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is optimism cross chain used for?",
+   "a": "It is used to find the official Optimism bridge path for moving supported assets between Ethereum and OP Mainnet.",
+   "open": true
+  },
+  {
+   "q": "Is optimism cross chain the official bridge?",
+   "a": "This landing page is not the official app; the official action happens at <a href=\"https://app.optimism.io/bridge/deposit\">app.optimism.io</a>.",
+   "open": false
+  },
+  {
+   "q": "How long does optimism cross chain bridging take?",
+   "a": "Optimism docs state Ethereum-to-OP Mainnet Standard Bridge transfers usually complete in 1-3 minutes, while OP Mainnet-to-Ethereum withdrawals complete after the 7-day challenge period.",
+   "open": false
+  },
+  {
+   "q": "Which assets can optimism cross chain route?",
+   "a": "The Standard Bridge supports ETH and most ERC-20 tokens, but availability depends on the selected token, bridge route, and token representation.",
+   "open": false
+  },
+  {
+   "q": "Can optimism cross chain send assets back to Ethereum?",
+   "a": "Yes, supported assets can be withdrawn from OP Mainnet to Ethereum, but users should review the longer withdrawal timing and required confirmations before signing.",
+   "open": false
+  }
+ ],
+ "official_url": "https://app.optimism.io/bridge/deposit",
+ "official_domain": "app.optimism.io",
+ "footer_note": "This page is not the official Optimism app; verify app.optimism.io before connecting, and treat all content as educational, not financial advice."
+}

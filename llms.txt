@@ -1,0 +1,72 @@
+# Optimism Cross-Chain
+> Optimism Cross-Chain is an independent, non-custodial dashboard for comparing and initiating asset routes between OP Mainnet, Ethereum, and supported blockchain networks.
+
+## What is Optimism Cross-Chain
+Optimism cross-chain activity includes bridging ETH or tokens between Ethereum and OP Mainnet and routing assets between OP Mainnet and other chains. The dashboard presents available routes, estimated costs, and timing without holding user keys or operating the underlying bridge. It is not the official Optimism bridge or a distinct cross-chain protocol. Unlike the canonical Standard Bridge, third-party routes may use liquidity pools, external messaging systems, or market makers to provide faster or broader transfers with different trust assumptions.
+
+## How it works
+1. Connect a compatible self-custody wallet and select the source chain, destination chain, asset, and amount.
+2. The dashboard retrieves eligible routes and displays expected output, network costs, bridge fees, and estimated completion time.
+3. Review token addresses and the destination, approve ERC-20 spending if required, then sign the source-chain transaction.
+4. The selected bridge locks, burns, or transfers the source asset and relays a cross-chain message or verified state transition.
+5. The destination contract mints, unlocks, or pays the corresponding asset; canonical OP Mainnet-to-Ethereum withdrawals require proving and finalizing after the challenge period.
+
+## Key facts
+- OP Mainnet is an EVM-compatible optimistic rollup with chain ID `10`; Ethereum Mainnet uses chain ID `1`.
+- OP Sepolia uses chain ID `11155420`; Ethereum Sepolia uses `11155111`.
+- ETH is OP Mainnet’s gas token; OP is the Optimism Collective governance token, not the gas token.
+- The Standard Bridge supports ETH and standard ERC-20 tokens but not fee-on-transfer or rebasing tokens.
+- Standard Bridge deposits from Ethereum usually complete in 1–3 minutes; withdrawals to Ethereum take seven days.
+- The L2 Standard Bridge predeploy is `0x4200000000000000000000000000000000000010`.
+- Canonical ERC-20 bridging uses escrow and minting or burning and unlocking through authenticated cross-domain messages.
+- SuperchainERC20 implements ERC-7802 burn-and-mint interoperability, while OP Stack interoperability remains under active development.
+- The dashboard is non-custodial, but underlying bridge contracts may escrow assets.
+- Security depends on the selected route, including contract upgrades, fault proofs, relayers, liquidity, token contracts, and destination-chain finality.
+
+## Common questions
+### Is Optimism Cross-Chain safe?
+It cannot access funds without wallet approval. Verify the domain, chain, token contract, recipient, allowance, and complete wallet simulation before signing; bridge and smart-contract risk remains.
+
+### Who holds my funds?
+The dashboard does not hold them. Your wallet controls signing, while the chosen bridge may temporarily escrow tokens or route them through protocol liquidity.
+
+### What fees will I pay?
+Costs can include source and destination gas, bridge or liquidity-provider fees, and swap price impact. Review the complete quoted output before approval.
+
+### How long does a transfer take?
+Third-party routes vary by confirmations and liquidity. Canonical Ethereum-to-OP deposits usually take minutes, while canonical OP-to-Ethereum withdrawals take seven days.
+
+### Which assets and chains are supported?
+Support is route-specific. ETH and eligible ERC-20 tokens are common, but token representations and contract addresses must match the destination chain.
+
+### How do I start?
+Connect a supported wallet, choose the route, compare the quote, verify every transaction field, and sign with enough native gas on the source chain.
+
+### What are the main risks?
+Incorrect networks or token addresses, malicious approvals, bridge exploits, upgrade authority, relayer failure, low liquidity, slippage, congestion, and destination-chain reorganization can delay or reduce recovery.
+
+## App
+- Dashboard: https://optimism-cross-chain-bridge.github.io/
+- App: https://optimism-cross-chain-bridge.github.io/dashboard/
+
+## Official resources
+Optimism: https://optimism.io/
+Optimism Bridge Portal: https://app.optimism.io/bridge
+Optimism Documentation: https://docs.optimism.io/
+Standard Bridge Guide: https://docs.optimism.io/app-developers/guides/bridging/standard-bridge
+OP Mainnet Network Information: https://docs.optimism.io/op-mainnet/network-information/connecting-to-op
+OP Stack Interoperability Explainer: https://docs.optimism.io/op-stack/interop/explainer
+Bridged Token Addresses: https://docs.optimism.io/app-developers/reference/tokens/tokenlist
+OP Stack Audit Reports: https://docs.optimism.io/op-stack/security/audit-reports
+Optimism Source Code: https://github.com/ethereum-optimism/optimism
+Superchain Registry: https://github.com/ethereum-optimism/superchain-registry
+Official X: https://x.com/Optimism
+
+## Data & references
+OP Mainnet Explorer: https://explorer.optimism.io/
+L2BEAT OP Mainnet: https://l2beat.com/scaling/projects/op-mainnet
+DeFiLlama OP Mainnet: https://defillama.com/chain/op-mainnet
+DeFiLlama Optimism Gateway: https://defillama.com/bridge/optimism-bridge
+CoinGecko Optimism: https://www.coingecko.com/en/coins/optimism
+ERC-7802 Standard: https://eips.ethereum.org/EIPS/eip-7802
+Ethereum Optimistic Rollups: https://ethereum.org/developers/docs/scaling/optimistic-rollups/
